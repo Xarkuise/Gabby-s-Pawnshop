@@ -661,7 +661,7 @@ button[class ^= navbar]:hover{
 }
 .form-element .form-control{
     width: 100%;
-    background-color: #3373dd;
+    background-color: #ffffff;
     border: none;
     outline: 0;
     padding: 1rem 1.6rem;
@@ -681,7 +681,7 @@ button[class ^= navbar]:hover{
     color: var(--light-color);
 }
 .form-element .form-control::placeholder{
-    color: var(--light-color);
+    color: var(--dark-color);
 }
 .btn-submit{
     margin-top: 4rem;
