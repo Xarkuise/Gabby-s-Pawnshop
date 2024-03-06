@@ -593,7 +593,7 @@ button[class ^= navbar]:hover{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -54px; 
+    bottom: -70px; 
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
