@@ -412,7 +412,7 @@ button[class ^= navbar]:hover{
 /* services section */
 .services .section-head .text-lg{
     color: var(--dark-gray);
-    margin-top: -2rem;
+    margin-top: -3rem;
 }
 .services .section-head img{
     margin: 3.7rem auto;
@@ -430,7 +430,7 @@ button[class ^= navbar]:hover{
     background-color: var(--light-gray);
 }
 .services-inner{
-    padding: 6rem 0;
+    padding: 1rem 0;
     position: relative;
     
 }
@@ -446,7 +446,7 @@ button[class ^= navbar]:hover{
     border: 1px solid #ffffff;
     border-radius: 10px;
     width: 230px;
-    margin: 1px;
+    margin: 25px;
     
 }
 .service-item h3{
@@ -538,6 +538,7 @@ button[class ^= navbar]:hover{
 /* package service */
 .package-service-inner{
     margin-top: 14rem;
+    position: relative;
 }
 .package-service{
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 80, 213, 0.85)), to(rgba(0, 80, 213, 0.95))), url('../images/package-service-img.jpg') center/cover no-repeat;
@@ -561,7 +562,7 @@ button[class ^= navbar]:hover{
 .package-service-item .icon{
     width: 86px;
     height: 86px;
-    background-color: var(--light-blue-color);
+    background: linear-gradient(200deg, #89CFF0, #0050d5);
     border-radius: 2rem;
     border-bottom-right-radius: 0;
     color: var(--light-color);
@@ -582,11 +583,29 @@ button[class ^= navbar]:hover{
     margin: 8rem 0 4rem 0;
 }
 .package-service-item .text-sm{
-    color: var(--dark-gray);
+    color: var(--dark-black);
 }
 .package-service-item .btn{
     margin: 4rem 0;
 }
+
+.package-btn-group{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -54px; 
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 0px 10px;
+    margin-left: 10px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; 
+}
+
 
 /* posts section */
 .posts{
