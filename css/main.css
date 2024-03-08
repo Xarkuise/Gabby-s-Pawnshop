@@ -5,6 +5,7 @@
     --fros-blue-color: #001433;
     --light-blue-color: #dc9600;
     --dark-color: #0d0d0d;
+    --blue-color: #34349d;
     --light-gray: #dedede;
     --dark-gray: #a1a1a0;
     --light-color: #fff;
@@ -60,12 +61,22 @@ a{
 
 .bg-white{
     background-color: var(--light-color);
+    
 }
 .text-blue{
     color: var(--fros-blue-color);
+    max-height: 200%;
 }
 .text-white{
     color: var(--light-color);
+}
+
+.text-black{
+    color: var(--dark-color);
+}
+
+.text-light-blue{
+    color: var(--blue-color);
 }
 
 /* button */
@@ -155,6 +166,7 @@ h1, h2, h3{
 }
 .text-md{
     font-size: 1.5rem;
+    text-align: left;
 }
 .text-lg{
     font-size: 2rem;
@@ -277,6 +289,7 @@ button[class ^= navbar]:hover{
 .header-inner{
     padding-top: 16rem;
 }
+
 .header-inner-left h1{
     font-size: 4rem;
     font-weight: 300;
@@ -294,12 +307,10 @@ button[class ^= navbar]:hover{
     max-width: 500px;
     margin-right: auto;
     margin-left: auto;
+    color: var(--dark-black);
+    
 }
-.header-inner-left .btn-group{
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-}
+
 .header-inner-right{
     margin-top: 6rem;
 }
@@ -307,6 +318,39 @@ button[class ^= navbar]:hover{
     max-width: 520px;
     margin: 0 auto;
 }
+
+
+/* contact page style */
+.header-inner-contact{
+    padding-top: 25rem;
+}
+
+.header-inner-left-contact h1{
+    font-size: 5rem;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+.header-inner-left-contact h1 span{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.header-inner-left-contact .text{
+    margin: 1rem 0;
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    color: var(--dark-black);
+}
+
+.header-inner-right-contact {
+    margin-top: 6rem;
+}
+
+.header-inner-right iframe{
+    max-width: 520px;
+    margin: 0 auto;
+}
+
 
 /* about section */
 .section-head h2{
@@ -440,12 +484,12 @@ button[class ^= navbar]:hover{
     background: linear-gradient(200deg, #89CFF0, #0050d5);
     border: 1px solid #ffffff;
     border-radius: 10px;
-    width: 230px;
+    width: 250px;
     margin: 25px;
     
 }
 .service-item h3{
-    margin: 5rem 0;
+    margin: 1rem 0;
     opacity: 0.7;
 }
 
@@ -453,7 +497,7 @@ button[class ^= navbar]:hover{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 10px; 
+    bottom: 1px; 
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -528,6 +572,61 @@ button[class ^= navbar]:hover{
 }
 .doc-panel-item:hover .info{
     bottom: 0;
+}
+
+/* FAQ panel */
+.faq-panel-inner {
+    margin-top: 8rem;
+}
+
+.section-head{
+    margin-top: 2rem;
+}
+
+.faq-panel-item {
+    margin-bottom: 3rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+    
+    
+}
+
+.faq-panel-item:last-child {
+    margin-bottom: 0;
+     
+}
+
+.question,
+.answer {
+    padding: 1.5rem;
+    
+}
+
+.question {
+    border-bottom: 1px solid var(--light-gray);
+}
+
+
+
+.answer {
+    display: none;
+    background-color: var(--light-gray);
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.faq-panel-item.active {
+    border-color: var(--blue);
+}
+
+.faq-panel-item.active .answer {
+    display: block;
+    max-height: 400px; 
+    opacity: 1;
 }
 
 /* package service */
@@ -607,7 +706,7 @@ button[class ^= navbar]:hover{
     background-color: var(--light-gray);
 }
 .posts-inner{
-    margin-top: 6rem;
+    margin-top: 5rem;
 }
 .post-item{
     padding: 1.2rem;
@@ -638,50 +737,69 @@ button[class ^= navbar]:hover{
 }
 
 /* contact section */
-.contact-left{
-    margin-bottom: 6rem;
-    height: 100%;
+.contact-right {
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.contact-left iframe{
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+
+.contact-right form {
+    margin-top: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-.contact-right{
-    padding: 5rem 4rem;
+
+.form-element {
+    width: calc(50% - 10px); /* Adjust the width as needed */
 }
-.contact-right form{
-    margin-top: 5rem;
+
+.form-element:nth-child(3),
+.form-element:nth-child(4) {
+    margin-top: 1.6rem; /* Adjust margin as needed */
 }
-.form-element .form-control{
+
+.form-element:nth-child(5) {
+    width: 100%; /* Full width for the message field */
+}
+
+.form-element .form-control {
     width: 100%;
     background-color: #ffffff;
     border: none;
+    border-radius: 10px;
     outline: 0;
     padding: 1rem 1.6rem;
     margin-bottom: 1.6rem;
-    color: var(--light-color);
-}
-.form-element .form-control::-webkit-input-placeholder{
-    color: var(--light-color);
-}
-.form-element .form-control::-moz-placeholder{
-    color: var(--light-color);
-}
-.form-element .form-control:-ms-input-placeholder{
-    color: var(--light-color);
-}
-.form-element .form-control::-ms-input-placeholder{
-    color: var(--light-color);
-}
-.form-element .form-control::placeholder{
     color: var(--dark-color);
 }
-.btn-submit{
+
+.form-element .form-control::-webkit-input-placeholder {
+    color: var(--dark-color);
+}
+
+.form-element .form-control::-moz-placeholder {
+    color: var(--dark-color);
+}
+
+.form-element .form-control:-ms-input-placeholder {
+    color: var(--dark-color);
+}
+
+.form-element .form-control::-ms-input-placeholder {
+    color: var(--dark-color);
+}
+
+.form-element .form-control::placeholder {
+    color: var(--dark-color);
+}
+
+.btn-submit {
     margin-top: 4rem;
 }
-.btn-submit i{
+
+.btn-submit i {
     margin-right: 2rem;
 }
 
@@ -791,8 +909,13 @@ button[class ^= navbar]:hover{
     .header-inner-left h1{
         font-size: 5.7rem;
     }
+
+    .header-inner-left-contact h1{
+        font-size: 5.7rem;
+    }
+
     .services-inner, .doc-panel-inner{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
     .doc-panel-inner{
         -webkit-column-gap: 3rem;
@@ -839,6 +962,25 @@ button[class ^= navbar]:hover{
     .header-inner-left .text{
         margin-left: 0;
     }
+
+    .header-inner-contact{
+        padding-top: 3.2rem;
+    }
+    .header-inner-contact .container{
+        grid-template-columns: 545px auto;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: calc(100vh - 32px);
+        position: relative;
+    }
+    .header-inner-left-contact{
+        text-align: left;
+    }
+    .header-inner-left-contact .text{
+        margin-left: 0;
+    }
+
     .header-inner-left .btn-group{
         -webkit-box-pack: start;
             -ms-flex-pack: start;
@@ -850,6 +992,7 @@ button[class ^= navbar]:hover{
         right: 0;
         padding-left: 5rem;
     }
+    
     .about-inner .container{
         grid-template-columns: repeat(2, 1fr);
         -webkit-column-gap: 3rem;
@@ -1010,14 +1153,22 @@ button[class ^= navbar]:hover{
         max-width: 647px;
     }
 
+    .header-inner-right-contact{
+        width: 100%;
+    }
+    .header-inner-right-contact iframe{
+        padding-left: 0;
+        max-width: 647px;
+    }
+
     .services-inner{
         grid-template-columns: repeat(4, 1fr);
-        -webkit-column-gap: 2rem;
-           -moz-column-gap: 2rem;
-                column-gap: 2rem;
+        -webkit-column-gap: 3rem;
+           -moz-column-gap: 3rem;
+                column-gap: 3rem;
     }
     .service-item{
-        margin-bottom: 0;
+        margin-bottom: 9px;
     }
     .doc-panel-inner{
         -webkit-column-gap: 9rem;
