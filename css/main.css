@@ -256,6 +256,7 @@ button[class ^= navbar]:hover{
 }
 .nav-item{
     margin: 1.4rem 0;
+    position: relative;
 }
 .nav-link{
     opacity: 0.8;
