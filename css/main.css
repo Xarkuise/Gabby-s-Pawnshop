@@ -63,6 +63,7 @@ a{
     background-color: var(--light-color);
     
 }
+
 .text-blue{
     color: var(--fros-blue-color);
     max-height: 200%;
@@ -165,7 +166,7 @@ h1, h2, h3{
     opacity: 0.9;
 }
 .text-md{
-    font-size: 1.5rem;
+    font-size: 1.69rem;
     text-align: left;
 }
 .text-lg{
@@ -352,6 +353,11 @@ button[class ^= navbar]:hover{
     margin: 0 auto;
 }
 
+.header-inner-right-image img{
+    margin-top: 6rem;
+    border-radius: 10px;
+    
+}
 
 /* about section */
 .section-head h2{
@@ -909,6 +915,11 @@ button[class ^= navbar]:hover{
 @media(min-width: 768px){
     .header-inner-left h1{
         font-size: 5.7rem;
+        margin-bottom: 40px;
+    }
+
+    .header-inner-left p {
+        margin-bottom: 20px;
     }
 
     .header-inner-left-contact h1{
@@ -950,7 +961,8 @@ button[class ^= navbar]:hover{
         padding-top: 3.2rem;
     }
     .header-inner .container{
-        grid-template-columns: 545px auto;
+        
+        grid-template-columns: repeat(2, 1fr);
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
@@ -965,7 +977,7 @@ button[class ^= navbar]:hover{
     }
 
     .header-inner-contact{
-        padding-top: 3.2rem;
+        padding-top: 4.2rem;
     }
     .header-inner-contact .container{
         grid-template-columns: 545px auto;
@@ -976,10 +988,12 @@ button[class ^= navbar]:hover{
         position: relative;
     }
     .header-inner-left-contact{
-        text-align: left;
+        text-align: left;   
     }
     .header-inner-left-contact .text{
         margin-left: 0;
+        font-size: 18px; /* Adjust font size as needed */
+        line-height: 1.5;
     }
 
     .header-inner-left .btn-group{
@@ -990,7 +1004,7 @@ button[class ^= navbar]:hover{
     .header-inner-right img{
         position: absolute;
         bottom: 0;
-        right: 0;
+        right: 10px;
         padding-left: 5rem;
     }
     
@@ -1156,10 +1170,22 @@ button[class ^= navbar]:hover{
 
     .header-inner-right-contact{
         width: 100%;
+        text-align: right; /* Align content to the right */
+        position: absolute; /* Position absolutely within the container */
+        top: 10; /* Align to the top */
+        right: 0; /* Align to the right */
     }
     .header-inner-right-contact iframe{
         padding-left: 0;
         max-width: 647px;
+    }
+
+    .header-inner-right-image{
+        width: 45%;
+        text-align: right; /* Align content to the right */
+        position: absolute; /* Position absolutely within the container */
+        top: 10; /* Align to the top */
+        right: 0; /* Align to the right */
     }
 
     .services-inner{
